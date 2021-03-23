@@ -16,6 +16,8 @@ using System.IO;
 using Microsoft.Extensions.PlatformAbstractions;
 using ActivityCalculator.Middlewares;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using ActivityCalculator.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace ActivityCalculator
 {
@@ -38,7 +40,10 @@ namespace ActivityCalculator
                 c.SubstitutionFormat = "VVV";
             });
 
-            services.AddAppServices(Configuration);
+
+            services.AddDbContext<AppDbContext>(c =>
+                c.UseNpgsql(Configuration.GetConnectionString("App")));
+            services.AddAppServices();
 
             services.AddControllersWithViews();
 

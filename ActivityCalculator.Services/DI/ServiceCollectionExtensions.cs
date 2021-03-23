@@ -11,12 +11,8 @@ namespace ActivityCalculator.Services.DI
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddAppServices(this IServiceCollection services,
-            IConfiguration config)
+        public static IServiceCollection AddAppServices(this IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(c =>
-                c.UseNpgsql(config.GetConnectionString("App")));
-
             services.AddAutoMapper(typeof(OrmMappingProfile));
 
             services.AddScoped<IDatasetService, DatasetService>();
