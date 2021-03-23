@@ -1,0 +1,33 @@
+﻿version: '3.7'
+services:
+    app:
+        container_name: 'aspnetcoreapp'
+        image: 'aspnetcoreapp'
+        build:
+            context: .
+            dockerfile: ActivityCalculator/Dockerfile
+        ports:
+            - "5000:80"
+        depends_on:
+            - postgres
+        command: >
+          sh -c "
+            echo waiting for postgres to be available on port 5432...;
+            while ! nc -z postgres 5432;
+            do
+              echo waiting...
+              sleep 3;
+            done;
+            echo Connected! Starting migrations and app...;
+            dotnet ActivityCalculator.dll migrate --urls 'http://0.0.0.0:5000'
+          "
+    postgres:
+        container_name: 'postgres'
+        image: postgres
+        restart: always
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: pg_db
+        ports:
+          - "5432:5432"

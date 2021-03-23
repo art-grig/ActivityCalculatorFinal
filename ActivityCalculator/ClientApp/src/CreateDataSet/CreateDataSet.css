@@ -1,0 +1,221 @@
+.main {
+  min-height: 607px;
+  padding: 20px 0 0 106px;
+  font-family: "Ubuntu", sans-serif;
+  color: #3c5aa8;
+  flex: 1;
+}
+
+.main__title {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0 0 40px 0;
+  opacity: 0.4;
+}
+
+.main__input-block {
+  width: 482px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+  align-items: center;
+}
+
+.main__input-block p {
+  margin: 0;
+}
+
+.main__input-block .main__desc {
+  align-self: baseline;
+  padding-top: 6px;
+}
+
+.main__input {
+  width: 320px;
+  height: 28px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.main__textarea {
+  width: 320px;
+  height: 82px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.main__form {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 23px 0 50px 0;
+}
+
+.main__form-titles {
+  display: flex;
+  justify-content: space-between;
+  width: 56%;
+  margin-top: 50px;
+}
+
+.main__form-titles span {
+  opacity: 0.4;
+}
+
+.main__form-titles span:first-child {
+  margin-left: 26px;
+}
+
+.main__form-titles span:last-child {
+  margin-left: -10px;
+}
+
+.main__input-form {
+  width: 170px;
+  height: 28px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.main__input-form:first-child {
+  width: 100px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.validOk:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+}
+
+.validBad:focus {
+  border-color: #843534;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 6px #ce8483;
+}
+
+.main__add-button {
+  display: flex;
+  width: 118px;
+  margin-top: 32px;
+  align-items: center;
+}
+
+.main__add-button p {
+  margin: 0 0 0 10px;
+}
+
+.main__add-button:hover {
+  cursor: pointer;
+}
+
+table.scroll {
+  width: 60%;
+  border-spacing: 0;
+  border: 2px solid rgba(93, 110, 151, 0.4);
+}
+
+.main__table {
+  width: 71%;
+  border: 1px solid rgba(93, 110, 151, 0.4);
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+.main__table tbody {
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.main__table tbody td,
+.main__table thead th {
+  width: 200px;
+  height: 25px;
+  border-top: 1px solid rgba(93, 110, 151, 0.4);
+  border-right: 1px solid rgba(93, 110, 151, 0.4);
+  text-align: center;
+  color: black;
+}
+
+.main__table thead th {
+  border-top: none;
+  color: rgba(93, 110, 151, 0.4);
+}
+
+.main__table td:last-child,
+.main__table th:last-child {
+  border-right: none;
+}
+
+thead tr th {
+  line-height: 50px;
+}
+
+tbody {
+  border-top: 2px solid rgba(93, 110, 151, 0.4);
+}
+
+.main-form__add-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60px;
+  cursor: pointer;
+}
+
+.main__buttons-block {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.main__buttons-block button:last-child {
+  width:189px;
+  height:38px;
+  border-radius:10px;
+  background-color: rgb(12, 107, 12);
+  border: none;
+  outline:none;
+  cursor:pointer;
+  color: white;
+  font-size:14px;
+}
+
+.main__buttons-block button:first-child {
+    width:189px;
+    height:38px;
+    border-radius:10px;
+    background-color: #4A9DFF;
+    border: none;
+    outline:none;
+    cursor:pointer;
+    color: white;
+    font-size:14px;
+    margin-right: 50px;
+}
+
+
+.main__buttons-block button:hover {
+    background-color: #0058bd;
+}
+
+.main__table-remove {
+    cursor: pointer;
+}

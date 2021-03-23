@@ -1,0 +1,21 @@
+﻿version: '3.8'
+services:
+    app:
+        container_name: 'aspnetcoreapp'
+        image: 'aspnetcoreapp'
+        build:
+            context: .
+        ports:
+            - "80:80"
+        depends_on:
+            - postgres
+    postgres:
+        container_name: 'postgres'
+        image: postgres
+        restart: always
+        environment:
+          POSTGRES_USER: root
+          POSTGRES_PASSWORD: root
+          POSTGRES_DB: pg_db
+        ports:
+          - "5432:5432"

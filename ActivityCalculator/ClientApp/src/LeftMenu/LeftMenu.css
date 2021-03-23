@@ -1,0 +1,58 @@
+
+.left-menu {
+  width: 215px;
+  box-shadow: 8px 0 5px -5px rgba(191, 191, 191, 0.5);
+  font-family: "Ubuntu", sans-serif;
+  color: #5d6d97;
+  background-color: white;
+}
+
+.left-menu p {
+  margin: 0;
+}
+
+.left-menu__apps {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  cursor: pointer;
+}
+
+.left-menu__svg-line {
+    height: 1px;
+    background-color:rgba(93, 110, 151, 0.4);
+}
+
+.left-menu__arrow-svg {
+  margin: 0 14px 0 23px;
+}
+
+.left-menu__apps:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.left-menu__datasetsList p:hover {
+  background-color:rgb(233, 233, 233);
+  cursor: pointer;
+}
+
+.left-menu__appLink {
+  display:block;
+  text-decoration: none;
+  color: #5d6d97;
+  line-height:35px;
+  padding-left: 70px; 
+}
+
+.left-menu__appLink:hover {
+  background-color: rgb(211, 211, 211);
+}
+
+.svg-rotate {
+  transform: rotate(180deg);
+}
+
+.left-menu__add-app-link {
+  text-decoration: none;
+  color: #5d6d97;
+}
