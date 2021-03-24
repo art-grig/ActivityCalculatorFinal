@@ -8,7 +8,7 @@ namespace ActivityCalculator.Services.Converters
 {
     public class CustomDateTimeConverter : JsonConverter<DateTime>
     {
-        private static readonly string _format = "dd.mm.yyyy";
+        private static readonly string _format = "dd'.'MM'.'yyyy";
 
         public override bool CanConvert(Type objectType)
         {
