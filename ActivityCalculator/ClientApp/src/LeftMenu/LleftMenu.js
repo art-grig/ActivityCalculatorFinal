@@ -16,7 +16,7 @@ class LMenu extends React.Component {
       this.setState({ dataSets: state.dataSets });
     });
     const getDataSets = async () => {
-      await fetch("http://localhost:5000/api/v1/Datasets")
+      await fetch("/api/v1/Datasets")
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
