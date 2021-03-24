@@ -19,7 +19,7 @@ class Main extends React.Component {
     deleteIds: [],
   };
 
-  
+
 
   dataHandler = (e) => {
     const name = e.target.name;
@@ -113,7 +113,7 @@ class Main extends React.Component {
         deletedIds: this.state.deleteIds,
       };
       const createDataSet = async () => {
-        await fetch("http://localhost:5000/api/v1/Datasets", {
+        await fetch("/api/v1/Datasets", {
           method: "POST",
           headers: {
             "Content-type": "application/json",
@@ -121,7 +121,7 @@ class Main extends React.Component {
           body: JSON.stringify(data),
         })
           .then((response) => response.json())
-          .then((data) => {            
+          .then((data) => {
             this.setState(
               {
                 newActivityLogs: [],
@@ -130,7 +130,7 @@ class Main extends React.Component {
               () => this.props.history.push(`/datasets/${data.data.id}`)
             );
           });
-          fetch("http://localhost:5000/api/v1/Datasets")
+          fetch("/api/v1/Datasets")
           .then((response) => response.json())
           .then((data) =>{
             store.dispatch({
@@ -142,7 +142,7 @@ class Main extends React.Component {
           })
       };
       createDataSet();
-      
+
     }
   };
 
